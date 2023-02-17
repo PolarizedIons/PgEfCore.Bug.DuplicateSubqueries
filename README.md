@@ -46,4 +46,4 @@ ityId", f2."Id", f2."Col1", f2."Col2", f2."Col3", f2."Col4", f2."Col5", f2."Firs
 ```
 
 ## Issue link
-(TODO)
+https://github.com/npgsql/efcore.pg/issues/2655

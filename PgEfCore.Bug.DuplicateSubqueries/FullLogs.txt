@@ -1,0 +1,394 @@
+dbug: 2023/02/17 17:50:00.680 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation)
+      The property 'FirstEntityInclude.FirstEntityId' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 2023/02/17 17:50:00.992 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure)
+      Entity Framework Core 7.0.3 initialized 'Database' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:7.0.3+fb48afb5038d8370cce4298b33a3ed51888890e7' with options: None
+dbug: 2023/02/17 17:50:01.029 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Creating DbConnection.
+dbug: 2023/02/17 17:50:01.074 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Created DbConnection. (46ms).
+dbug: 2023/02/17 17:50:01.087 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:01.322 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:01.328 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:01.346 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'efcorebug' on server '' (12ms).
+dbug: 2023/02/17 17:50:01.378 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Creating DbConnection.
+dbug: 2023/02/17 17:50:01.378 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Created DbConnection. (0ms).
+dbug: 2023/02/17 17:50:01.378 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'postgres' on server ''.
+dbug: 2023/02/17 17:50:01.408 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:01.423 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:01.433 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (9ms).
+dbug: 2023/02/17 17:50:01.438 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (18ms).
+dbug: 2023/02/17 17:50:01.453 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      REVOKE CONNECT ON DATABASE efcorebug FROM PUBLIC;
+      SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = 'efcorebug';
+info: 2023/02/17 17:50:01.719 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (263ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      REVOKE CONNECT ON DATABASE efcorebug FROM PUBLIC;
+      SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = 'efcorebug';
+dbug: 2023/02/17 17:50:01.727 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:01.728 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:01.729 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (1ms).
+dbug: 2023/02/17 17:50:01.731 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DROP DATABASE efcorebug;
+info: 2023/02/17 17:50:01.846 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (115ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      DROP DATABASE efcorebug;
+dbug: 2023/02/17 17:50:01.846 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:01.847 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'postgres' on server '' (0ms).
+dbug: 2023/02/17 17:50:01.854 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Disposing connection to database 'postgres' on server ''.
+dbug: 2023/02/17 17:50:01.856 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Disposed connection to database 'postgres' on server '' (2ms).
+dbug: 2023/02/17 17:50:01.859 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:01.906 RelationalEventId.ConnectionError[20004] (Microsoft.EntityFrameworkCore.Database.Connection)
+      An error occurred using the connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:01.922 CoreEventId.ShadowPropertyCreated[10600] (Microsoft.EntityFrameworkCore.Model.Validation)
+      The property 'FirstEntityInclude.FirstEntityId' was created in shadow state because there are no eligible CLR members with a matching name.
+dbug: 2023/02/17 17:50:01.943 RelationalEventId.ConnectionCreating[20005] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Creating DbConnection.
+dbug: 2023/02/17 17:50:01.943 RelationalEventId.ConnectionCreated[20006] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Created DbConnection. (0ms).
+dbug: 2023/02/17 17:50:01.944 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'postgres' on server ''.
+dbug: 2023/02/17 17:50:01.967 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:01.967 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:01.967 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:01.968 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:01.968 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE DATABASE efcorebug;
+info: 2023/02/17 17:50:02.289 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (321ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE DATABASE efcorebug;
+dbug: 2023/02/17 17:50:02.290 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:02.291 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'postgres' on server '' (0ms).
+dbug: 2023/02/17 17:50:02.294 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Disposing connection to database 'postgres' on server ''.
+dbug: 2023/02/17 17:50:02.294 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Disposed connection to database 'postgres' on server '' (0ms).
+dbug: 2023/02/17 17:50:02.295 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:02.321 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:02.321 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:02.322 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'efcorebug' on server '' (0ms).
+dbug: 2023/02/17 17:50:02.523 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:02.578 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:02.584 RelationalEventId.TransactionStarting[20209] (Microsoft.EntityFrameworkCore.Database.Transaction)
+      Beginning transaction with isolation level 'Unspecified'.
+dbug: 2023/02/17 17:50:02.596 RelationalEventId.TransactionStarted[20200] (Microsoft.EntityFrameworkCore.Database.Transaction)
+      Began transaction with isolation level 'ReadCommitted'.
+dbug: 2023/02/17 17:50:02.598 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:02.598 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.599 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (1ms).
+dbug: 2023/02/17 17:50:02.600 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "FirstEntities" (
+          "Id" uuid NOT NULL,
+          "SecondEntityId" uuid NOT NULL,
+          CONSTRAINT "PK_FirstEntities" PRIMARY KEY ("Id")
+      );
+info: 2023/02/17 17:50:02.628 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "FirstEntities" (
+          "Id" uuid NOT NULL,
+          "SecondEntityId" uuid NOT NULL,
+          CONSTRAINT "PK_FirstEntities" PRIMARY KEY ("Id")
+      );
+dbug: 2023/02/17 17:50:02.628 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:02.629 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.629 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.629 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "SecondEntities" (
+          "Id" uuid NOT NULL,
+          "FirstEntityId" uuid NOT NULL,
+          CONSTRAINT "PK_SecondEntities" PRIMARY KEY ("Id")
+      );
+info: 2023/02/17 17:50:02.641 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "SecondEntities" (
+          "Id" uuid NOT NULL,
+          "FirstEntityId" uuid NOT NULL,
+          CONSTRAINT "PK_SecondEntities" PRIMARY KEY ("Id")
+      );
+dbug: 2023/02/17 17:50:02.642 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:02.642 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.643 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.643 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "FirstEntityIncludes" (
+          "Id" uuid NOT NULL,
+          "Col1" text NOT NULL,
+          "Col2" text NOT NULL,
+          "Col3" text NOT NULL,
+          "Col4" text NOT NULL,
+          "Col5" text NOT NULL,
+          "FirstEntityId" uuid NULL,
+          CONSTRAINT "PK_FirstEntityIncludes" PRIMARY KEY ("Id"),
+          CONSTRAINT "FK_FirstEntityIncludes_FirstEntities_FirstEntityId" FOREIGN KEY ("FirstEntityId") REFERENCES "FirstEntities" ("Id")
+      );
+info: 2023/02/17 17:50:02.667 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "FirstEntityIncludes" (
+          "Id" uuid NOT NULL,
+          "Col1" text NOT NULL,
+          "Col2" text NOT NULL,
+          "Col3" text NOT NULL,
+          "Col4" text NOT NULL,
+          "Col5" text NOT NULL,
+          "FirstEntityId" uuid NULL,
+          CONSTRAINT "PK_FirstEntityIncludes" PRIMARY KEY ("Id"),
+          CONSTRAINT "FK_FirstEntityIncludes_FirstEntities_FirstEntityId" FOREIGN KEY ("FirstEntityId") REFERENCES "FirstEntities" ("Id")
+      );
+dbug: 2023/02/17 17:50:02.668 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteNonQuery'.
+dbug: 2023/02/17 17:50:02.668 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.668 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+dbug: 2023/02/17 17:50:02.669 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_FirstEntityIncludes_FirstEntityId" ON "FirstEntityIncludes" ("FirstEntityId");
+info: 2023/02/17 17:50:02.678 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE INDEX "IX_FirstEntityIncludes_FirstEntityId" ON "FirstEntityIncludes" ("FirstEntityId");
+dbug: 2023/02/17 17:50:02.684 RelationalEventId.TransactionCommitting[20210] (Microsoft.EntityFrameworkCore.Database.Transaction)
+      Committing transaction.
+dbug: 2023/02/17 17:50:02.702 RelationalEventId.TransactionCommitted[20202] (Microsoft.EntityFrameworkCore.Database.Transaction)
+      Committed transaction.
+dbug: 2023/02/17 17:50:02.707 RelationalEventId.TransactionDisposed[20204] (Microsoft.EntityFrameworkCore.Database.Transaction)
+      Disposing transaction.
+dbug: 2023/02/17 17:50:02.708 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:02.711 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'efcorebug' on server '' (3ms).
+#############################################################
+######################  NOT DOING IT ########################
+#############################################################
+dbug: 2023/02/17 17:50:02.831 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query)
+      Compiling query expression:
+      'DbSet<FirstEntity>()
+          .Include(x => x.ToInclude)
+          .Join(
+              inner: DbSet<SecondEntity>(),
+              outerKeySelector: first => first.SecondEntityId,
+              innerKeySelector: second => second.FirstEntityId,
+              resultSelector: (first, second) => new {
+                  first = first,
+                  second = second
+               })'
+dbug: 2023/02/17 17:50:02.961 CoreEventId.NavigationBaseIncluded[10112] (Microsoft.EntityFrameworkCore.Query)
+      Including navigation: 'FirstEntity.ToInclude'.
+dbug: 2023/02/17 17:50:03.506 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query)
+      Generated query execution expression:
+      'queryContext => new SingleQueryingEnumerable<<>f__AnonymousType0<FirstEntity, SecondEntity>>(
+          (RelationalQueryContext)queryContext,
+          RelationalCommandCache.QueryExpression(
+              Client Projections:
+                  0 -> Dictionary<IProperty, int> { [Property: FirstEntity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: FirstEntity.SecondEntityId (Guid) Required, 1] }
+                  1 -> 0
+                  2 -> 2
+                  3 -> Dictionary<IProperty, int> { [Property: FirstEntityInclude.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 3], [Property: FirstEntityInclude.Col1 (string) Required, 4], [Property: FirstEntityIn
+clude.Col2 (string) Required, 5], [Property: FirstEntityInclude.Col3 (string) Required, 6], [Property: FirstEntityInclude.Col4 (string) Required, 7], [Property: FirstEntityInclude.Col5 (string) Required, 8], [Property: FirstEnti
+tyInclude.FirstEntityId (no field, Guid?) Shadow FK Index, 9] }
+                  4 -> 3
+                  5 -> Dictionary<IProperty, int> { [Property: SecondEntity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 2], [Property: SecondEntity.FirstEntityId (Guid) Required, 10] }
+              SELECT f.Id, f.SecondEntityId, s.Id, f0.Id, f0.Col1, f0.Col2, f0.Col3, f0.Col4, f0.Col5, f0.FirstEntityId, s.FirstEntityId
+              FROM FirstEntities AS f
+              INNER JOIN SecondEntities AS s ON f.SecondEntityId == s.FirstEntityId
+              LEFT JOIN FirstEntityIncludes AS f0 ON f.Id == f0.FirstEntityId
+              ORDER BY f.Id ASC, s.Id ASC),
+          null,
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, <>f__AnonymousType0<FirstEntity, SecondEntity>>,
+          PgEfCore.Bug.DuplicateSubqueries.Database,
+          False,
+          False,
+          True
+      )'
+dbug: 2023/02/17 17:50:03.572 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 2023/02/17 17:50:03.572 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 2023/02/17 17:50:03.572 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteReader' (0ms).
+dbug: 2023/02/17 17:50:03.573 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:03.573 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:03.574 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT f."Id", f."SecondEntityId", s."Id", f0."Id", f0."Col1", f0."Col2", f0."Col3", f0."Col4", f0."Col5", f0."FirstEntityId", s."FirstEntityId"
+      FROM "FirstEntities" AS f
+      INNER JOIN "SecondEntities" AS s ON f."SecondEntityId" = s."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f0 ON f."Id" = f0."FirstEntityId"
+      ORDER BY f."Id", s."Id"
+info: 2023/02/17 17:50:03.586 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT f."Id", f."SecondEntityId", s."Id", f0."Id", f0."Col1", f0."Col2", f0."Col3", f0."Col4", f0."Col5", f0."FirstEntityId", s."FirstEntityId"
+      FROM "FirstEntities" AS f
+      INNER JOIN "SecondEntities" AS s ON f."SecondEntityId" = s."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f0 ON f."Id" = f0."FirstEntityId"
+      ORDER BY f."Id", s."Id"
+dbug: 2023/02/17 17:50:03.603 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command)
+      Closing data reader to 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:03.613 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command)
+      A data reader for 'efcorebug' on server 'tcp://localhost:5432' is being disposed after spending 20ms reading results.
+dbug: 2023/02/17 17:50:03.614 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:03.614 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'efcorebug' on server '' (0ms).
+#############################################################
+########################  DOING IT ##########################
+#############################################################
+dbug: 2023/02/17 17:50:03.616 CoreEventId.QueryCompilationStarting[10111] (Microsoft.EntityFrameworkCore.Query)
+      Compiling query expression:
+      'DbSet<FirstEntity>()
+          .Include(x => x.ToInclude)
+          .Join(
+              inner: DbSet<SecondEntity>(),
+              outerKeySelector: first => first.SecondEntityId,
+              innerKeySelector: second => second.FirstEntityId,
+              resultSelector: (first, second) => new {
+                  first = first,
+                  haha1 = first.ComputedProperty1,
+                  haha2 = first.ComputedProperty2,
+                  haha3 = first.ComputedProperty3
+               })'
+dbug: 2023/02/17 17:50:03.618 CoreEventId.NavigationBaseIncluded[10112] (Microsoft.EntityFrameworkCore.Query)
+      Including navigation: 'FirstEntity.ToInclude'.
+dbug: 2023/02/17 17:50:03.619 CoreEventId.NavigationBaseIncluded[10112] (Microsoft.EntityFrameworkCore.Query)
+      Including navigation: 'FirstEntity.ToInclude'.
+dbug: 2023/02/17 17:50:03.619 CoreEventId.NavigationBaseIncluded[10112] (Microsoft.EntityFrameworkCore.Query)
+      Including navigation: 'FirstEntity.ToInclude'.
+dbug: 2023/02/17 17:50:03.620 CoreEventId.NavigationBaseIncluded[10112] (Microsoft.EntityFrameworkCore.Query)
+      Including navigation: 'FirstEntity.ToInclude'.
+warn: 2023/02/17 17:50:03.654 RelationalEventId.MultipleCollectionIncludeWarning[20504] (Microsoft.EntityFrameworkCore.Query)
+      Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will
+use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning cal
+l 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+dbug: 2023/02/17 17:50:03.669 CoreEventId.QueryExecutionPlanned[10107] (Microsoft.EntityFrameworkCore.Query)
+      Generated query execution expression:
+      'queryContext => new SingleQueryingEnumerable<<>f__AnonymousType1<FirstEntity, int, int, int>>(
+          (RelationalQueryContext)queryContext,
+          RelationalCommandCache.QueryExpression(
+              Client Projections:
+                  0 -> Dictionary<IProperty, int> { [Property: FirstEntity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: FirstEntity.SecondEntityId (Guid) Required, 1] }
+                  1 -> 0
+                  2 -> 2
+                  3 -> Dictionary<IProperty, int> { [Property: FirstEntityInclude.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 3], [Property: FirstEntityInclude.Col1 (string) Required, 4], [Property: FirstEntityIn
+clude.Col2 (string) Required, 5], [Property: FirstEntityInclude.Col3 (string) Required, 6], [Property: FirstEntityInclude.Col4 (string) Required, 7], [Property: FirstEntityInclude.Col5 (string) Required, 8], [Property: FirstEnti
+tyInclude.FirstEntityId (no field, Guid?) Shadow FK Index, 9] }
+                  4 -> 3
+                  5 -> Dictionary<IProperty, int> { [Property: FirstEntityInclude.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 10], [Property: FirstEntityInclude.Col1 (string) Required, 11], [Property: FirstEntity
+Include.Col2 (string) Required, 12], [Property: FirstEntityInclude.Col3 (string) Required, 13], [Property: FirstEntityInclude.Col4 (string) Required, 14], [Property: FirstEntityInclude.Col5 (string) Required, 15], [Property: Fir
+stEntityInclude.FirstEntityId (no field, Guid?) Shadow FK Index, 16] }
+                  6 -> 10
+                  7 -> Dictionary<IProperty, int> { [Property: FirstEntityInclude.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 17], [Property: FirstEntityInclude.Col1 (string) Required, 18], [Property: FirstEntity
+Include.Col2 (string) Required, 19], [Property: FirstEntityInclude.Col3 (string) Required, 20], [Property: FirstEntityInclude.Col4 (string) Required, 21], [Property: FirstEntityInclude.Col5 (string) Required, 22], [Property: Fir
+stEntityInclude.FirstEntityId (no field, Guid?) Shadow FK Index, 23] }
+                  8 -> 17
+                  9 -> Dictionary<IProperty, int> { [Property: FirstEntityInclude.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 24], [Property: FirstEntityInclude.Col1 (string) Required, 25], [Property: FirstEntity
+Include.Col2 (string) Required, 26], [Property: FirstEntityInclude.Col3 (string) Required, 27], [Property: FirstEntityInclude.Col4 (string) Required, 28], [Property: FirstEntityInclude.Col5 (string) Required, 29], [Property: Fir
+stEntityInclude.FirstEntityId (no field, Guid?) Shadow FK Index, 30] }
+                  10 -> 24
+              SELECT f.Id, f.SecondEntityId, s.Id, f0.Id, f0.Col1, f0.Col2, f0.Col3, f0.Col4, f0.Col5, f0.FirstEntityId, f1.Id, f1.Col1, f1.Col2, f1.Col3, f1.Col4, f1.Col5, f1.FirstEntityId, f2.Id, f2.Col1, f2.Col2, f2.Col3, f2.
+Col4, f2.Col5, f2.FirstEntityId, f3.Id, f3.Col1, f3.Col2, f3.Col3, f3.Col4, f3.Col5, f3.FirstEntityId
+              FROM FirstEntities AS f
+              INNER JOIN SecondEntities AS s ON f.SecondEntityId == s.FirstEntityId
+              LEFT JOIN FirstEntityIncludes AS f0 ON f.Id == f0.FirstEntityId
+              LEFT JOIN FirstEntityIncludes AS f1 ON f.Id == f1.FirstEntityId
+              LEFT JOIN FirstEntityIncludes AS f2 ON f.Id == f2.FirstEntityId
+              LEFT JOIN FirstEntityIncludes AS f3 ON f.Id == f3.FirstEntityId
+              ORDER BY f.Id ASC, s.Id ASC, f0.Id ASC, f1.Id ASC, f2.Id ASC),
+          null,
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, <>f__AnonymousType1<FirstEntity, int, int, int>>,
+          PgEfCore.Bug.DuplicateSubqueries.Database,
+          False,
+          False,
+          True
+      )'
+dbug: 2023/02/17 17:50:03.675 RelationalEventId.CommandCreating[20103] (Microsoft.EntityFrameworkCore.Database.Command)
+      Creating DbCommand for 'ExecuteReader'.
+dbug: 2023/02/17 17:50:03.675 RelationalEventId.CommandCreated[20104] (Microsoft.EntityFrameworkCore.Database.Command)
+      Created DbCommand for 'ExecuteReader' (0ms).
+dbug: 2023/02/17 17:50:03.675 RelationalEventId.CommandInitialized[20106] (Microsoft.EntityFrameworkCore.Database.Command)
+      Initialized DbCommand for 'ExecuteReader' (0ms).
+dbug: 2023/02/17 17:50:03.675 RelationalEventId.ConnectionOpening[20000] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opening connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:03.676 RelationalEventId.ConnectionOpened[20001] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Opened connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:03.676 RelationalEventId.CommandExecuting[20100] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT f."Id", f."SecondEntityId", s."Id", f0."Id", f0."Col1", f0."Col2", f0."Col3", f0."Col4", f0."Col5", f0."FirstEntityId", f1."Id", f1."Col1", f1."Col2", f1."Col3", f1."Col4", f1."Col5", f1."FirstEntityId", f2."Id", f2
+."Col1", f2."Col2", f2."Col3", f2."Col4", f2."Col5", f2."FirstEntityId", f3."Id", f3."Col1", f3."Col2", f3."Col3", f3."Col4", f3."Col5", f3."FirstEntityId"
+      FROM "FirstEntities" AS f
+      INNER JOIN "SecondEntities" AS s ON f."SecondEntityId" = s."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f0 ON f."Id" = f0."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f1 ON f."Id" = f1."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f2 ON f."Id" = f2."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f3 ON f."Id" = f3."FirstEntityId"
+      ORDER BY f."Id", s."Id", f0."Id", f1."Id", f2."Id"
+info: 2023/02/17 17:50:03.681 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command)
+      Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT f."Id", f."SecondEntityId", s."Id", f0."Id", f0."Col1", f0."Col2", f0."Col3", f0."Col4", f0."Col5", f0."FirstEntityId", f1."Id", f1."Col1", f1."Col2", f1."Col3", f1."Col4", f1."Col5", f1."FirstEntityId", f2."Id", f2
+."Col1", f2."Col2", f2."Col3", f2."Col4", f2."Col5", f2."FirstEntityId", f3."Id", f3."Col1", f3."Col2", f3."Col3", f3."Col4", f3."Col5", f3."FirstEntityId"
+      FROM "FirstEntities" AS f
+      INNER JOIN "SecondEntities" AS s ON f."SecondEntityId" = s."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f0 ON f."Id" = f0."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f1 ON f."Id" = f1."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f2 ON f."Id" = f2."FirstEntityId"
+      LEFT JOIN "FirstEntityIncludes" AS f3 ON f."Id" = f3."FirstEntityId"
+      ORDER BY f."Id", s."Id", f0."Id", f1."Id", f2."Id"
+dbug: 2023/02/17 17:50:03.682 RelationalEventId.DataReaderClosing[20301] (Microsoft.EntityFrameworkCore.Database.Command)
+      Closing data reader to 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:03.683 RelationalEventId.DataReaderDisposing[20300] (Microsoft.EntityFrameworkCore.Database.Command)
+      A data reader for 'efcorebug' on server 'tcp://localhost:5432' is being disposed after spending 0ms reading results.
+dbug: 2023/02/17 17:50:03.683 RelationalEventId.ConnectionClosing[20002] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closing connection to database 'efcorebug' on server 'tcp://localhost:5432'.
+dbug: 2023/02/17 17:50:03.683 RelationalEventId.ConnectionClosed[20003] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Closed connection to database 'efcorebug' on server '' (0ms).
+dbug: 2023/02/17 17:50:03.686 CoreEventId.ContextDisposed[10407] (Microsoft.EntityFrameworkCore.Infrastructure)
+      'Database' disposed.
+dbug: 2023/02/17 17:50:03.688 RelationalEventId.ConnectionDisposing[20007] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Disposing connection to database 'efcorebug' on server ''.
+dbug: 2023/02/17 17:50:03.689 RelationalEventId.ConnectionDisposed[20008] (Microsoft.EntityFrameworkCore.Database.Connection)
+      Disposed connection to database 'efcorebug' on server '' (1ms).
+
